@@ -1,0 +1,25 @@
+{
+  "name": "nodedeneme",
+  "version": "0.1.0",
+  "description": "quick server symphony",
+  "main": "./dist/index.js",
+  "scripts": {
+    "go": "npm run linkSelf && npm run link && npm run build",
+    "goWatch": "npm run linkSelf && npm run link && npm run buildWatch",
+    "linkSelf": "npm link",
+    "build": "npm run removeDist && webpack",
+    "buildts": "npm run removeDist && tsc",
+    "buildtsWatch": "npm run removeDist && tsc --watch",
+    "removeDist": "rm -rf dist/*",
+    "buildWatch": "npm run removeDist && webpack --watch",
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "hazelcast-client": "^3.12.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hazelcast-client": "^3.12.3"
+  }
+}
